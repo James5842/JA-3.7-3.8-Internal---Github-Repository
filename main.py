@@ -183,7 +183,6 @@ def q20 ():
 def DQ():
   qc.clear()
   qc.append(question_order[qn[0]])
-  print(question_order)
   for question in questions:
     if question['name']==qc[0]:
       display.config(state='normal')
@@ -200,7 +199,6 @@ def DQ():
       pass
 
 def submit():
-  print("submitted")
   for question in questions:
       i = 0
       for answer in question['answers']:
@@ -210,27 +208,15 @@ def submit():
       response = int(response)
       response -= 1
       if response >= 0 and response < i:
-        print("response in bounds")
-        print(qc[0])
         for question in questions:
-          print(qc[0])
-          print(question['name'])
-          print("---")
           if question['name']==qc[0]:
-            print("name check passed")
-            print(qc[0])
-            print(question['name'])
             if question['answers'][response]['correct'] == 10:
-              print("correct")
               display.config(state='normal')
               display.delete("0.0",tk.END)
               display.insert(tk.END,"Correct!")
               answer_box.delete("0",tk.END)
               display.config(state='disabled')
               window.update()
-              count=qn[0]+1
-              qn.clear()
-              qn.append(count)
               count2=Correct_answers[0]+1
               Correct_answers.clear()
               Correct_answers.append(count2)
@@ -260,9 +246,6 @@ def submit():
               answer_box.delete("0",tk.END)
               display.config(state='disabled')
               window.update()
-              count=qn[0]+1
-              qn.clear()
-              qn.append(count)
               time.sleep(1)
               print(qn)
               print(Correct_answers)
@@ -282,6 +265,9 @@ def submit():
                 display.config(state='disabled')
               else:
                 exec("DQ()")
+        count=qn[0]+1
+        qn.clear()
+        qn.append(count)
       else:
         display.config(state='normal')
         display.delete("0.0",tk.END)
