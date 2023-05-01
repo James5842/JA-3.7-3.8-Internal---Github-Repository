@@ -14,33 +14,33 @@ answer_box = tk.Entry (window, width=30)
 answer_box.place (x=20, y=1255)
 quiz_questions=[]
 quiz_questions.append("Placeholder")
-n=30
+n=50
 qn=[]
 qc=[]
 Correct_answers=[]
 Correct_answers.append(0)
 question_order=[]
 global question_1, question_2, question_3, question_4, question_5, question_6, question_7, question_8, question_9, question_10, question_11, question_12, question_13, question_14, question_15, question_16, question_17, question_18, question_19, question_20
-question_1=1
-question_2=2
-question_3=3
-question_4=4
-question_5=5
-question_6=6
-question_7=7
-question_8=8
-question_9=9
-question_10=10
-question_11=11
-question_12=12
-question_13=13
-question_14=14
-question_15=15
-question_16=16
-question_17=17
-question_18=18
-question_19=19
-question_20=20
+question_1=100
+question_2=200
+question_3=300
+question_4=400
+question_5=500
+question_6=600
+question_7=700
+question_8=800
+question_9=900
+question_10=1000
+question_11=1100
+question_12=1200
+question_13=1300
+question_14=1400
+question_15=1500
+question_16=1600
+question_17=1700
+question_18=1800
+question_19=1900
+question_20=2000
 
 def numgen ():
   exec("q1()")
@@ -63,127 +63,127 @@ def numgen ():
   exec("q18()")
   exec("q19()")
   exec("q20()")
+  print(question_order)
 def q1 ():
   question_1=(random.randint(1,n))
   question_order.append(question_1)
 def q2 ():
   question_2=(random.randint(1,n))
-  if question_2 == question_1:
+  if question_2 in question_order:
     exec("q2()")
   else:
     question_order.append(question_2)
 def q3 ():
   question_3=(random.randint(1,n))
-  if question_3 == question_1 or question_3 == question_2:
+  if question_3 in question_order:
     exec("q3()")
   else:
     question_order.append(question_3)
 def q4 ():
   question_4=(random.randint(1,n))
-  if question_4 == question_1 or question_4 == question_2 or question_4 == question_3:
+  if question_4 in question_order:
     exec("q4()")
   else:
     question_order.append(question_4)
 def q5 ():
   question_5=(random.randint(1,n))
-  if question_5 == question_1 or question_5 == question_2 or question_5 == question_3 or question_5 == question_4:
+  if question_5 in question_order:
     exec("q5()")
   else:
     question_order.append(question_5)
 def q6 ():
   question_6=(random.randint(1,n))
-  if question_6 == question_1 or question_6 == question_2 or question_6 == question_3 or question_6 == question_4 or question_6 == question_5:
+  if question_6 in question_order:
     exec("q6()")
   else:
     question_order.append(question_6)
 def q7 ():
   question_7=(random.randint(1,n))
-  if question_7 == question_1 or question_7 == question_2 or question_7 == question_3 or question_7 == question_4 or question_7 == question_5 or question_7 == question_6:
+  if question_7 in question_order:
     exec("q7()")
   else:
     question_order.append(question_7)
 def q8 ():
   question_8=(random.randint(1,n))
-  if question_8 == question_1 or question_8 == question_2 or question_8 == question_3 or question_8 == question_4 or question_8 == question_5 or question_8 == question_6 or question_8 == question_7:
+  if question_8 in question_order:
     exec("q8()")
   else:
     question_order.append(question_8)
 def q9 ():
   question_9=(random.randint(1,n))
-  if question_9 == question_1 or question_9 == question_2 or question_9 == question_3 or question_9 == question_4 or question_9 == question_5 or question_9 == question_6 or question_9 == question_7 or question_9 == question_8:
+  if question_9 in question_order:
     exec("q9()")
   else:
     question_order.append(question_9)
 def q10 ():
   question_10=(random.randint(1,n))
-  if question_10 == question_1 or question_10 == question_2 or question_10 == question_3 or question_10 == question_4 or question_10 == question_5 or question_10 == question_6 or question_10 == question_7 or question_10 == question_8 or question_10 == question_9:
+  if question_10 in question_order:
     exec("q10()")
   else:
     question_order.append(question_10)
 def q11 ():
   question_11=(random.randint(1,n))
-  if question_11 == question_1 or question_11 == question_2 or question_11 == question_3 or question_11 == question_4 or question_11 == question_5 or question_11 == question_6 or question_11 == question_7 or question_11 == question_8 or question_11 == question_9 or question_11 == question_10:
+  if question_11 in question_order:
     exec("q11()")
   else:
     question_order.append(question_11)
 def q12 ():
   question_12=(random.randint(1,n))
-  if question_12 == question_1 or question_12 == question_2 or question_12 == question_3 or question_12 == question_4 or question_12 == question_5 or question_12 == question_6 or question_12 == question_7 or question_12 == question_8 or question_12 == question_9 or question_12 == question_10 or question_12 == question_11:
+  if question_12 in question_order:
     exec("q12()")
   else:
     question_order.append(question_12)
 def q13 ():
   question_13=(random.randint(1,n))
-  if question_13 == question_1 or question_13 == question_2 or question_13 == question_3 or question_13 == question_4 or question_13 == question_5 or question_13 == question_6 or question_13 == question_7 or question_13 == question_8 or question_13 == question_9 or question_13 == question_10 or question_13 == question_11 or question_13 == question_12:
+  if question_13 in question_order:
     exec("q13()")
   else:
     question_order.append(question_13)
 def q14 ():
   question_14=(random.randint(1,n))
-  if question_14 == question_1 or question_14 == question_2 or question_14 == question_3 or question_14 == question_4 or question_14 == question_5 or question_14 == question_6 or question_14 == question_7 or question_14 == question_8 or question_14 == question_9 or question_14 == question_10 or question_14 == question_11 or question_14 == question_12 or question_14 == question_13:
+  if question_14 in question_order:
     exec("q14()")
   else:
     question_order.append(question_14)
 def q15 ():
   question_15=(random.randint(1,n))
-  if question_15 == question_1 or question_15 == question_2 or question_15 == question_3 or question_15 == question_4 or question_15 == question_5 or question_15 == question_6 or question_15 == question_7 or question_15 == question_8 or question_15 == question_9 or question_15 == question_10 or question_15 == question_11 or question_15 == question_12 or question_15 == question_13 or question_15 == question_14:
+  if question_15 in question_order:
     exec("q15()")
   else:
     question_order.append(question_15)
 def q16 ():
   question_16=(random.randint(1,n))
-  if question_16 == question_1 or question_16 == question_2 or question_16 == question_3 or question_16 == question_4 or question_16 == question_5 or question_16 == question_6 or question_16 == question_7 or question_16 == question_8 or question_16 == question_9 or question_16 == question_10 or question_16 == question_11 or question_16 == question_12 or question_16 == question_13 or question_16 == question_14 or question_16 == question_15:
+  if question_16 in question_order:
     exec("q16()")
   else:
     question_order.append(question_16)
 def q17 ():
   question_17=(random.randint(1,n))
-  if question_17 == question_1 or question_17 == question_2 or question_17 == question_3 or question_17 == question_4 or question_17 == question_5 or question_17 == question_6 or question_17 == question_7 or question_17 == question_8 or question_17 == question_9 or question_17 == question_10 or question_17 == question_11 or question_17 == question_12 or question_17 == question_13 or question_17 == question_14 or question_17 == question_15 or question_17 == question_16:
+  if question_17 in question_order:
     exec("q17()")
   else:
     question_order.append(question_17)
 def q18 ():
   question_18=(random.randint(1,n))
-  if question_18 == question_1 or question_18 == question_2 or question_18 == question_3 or question_18 == question_4 or question_18 == question_5 or question_18 == question_6 or question_18 == question_7 or question_18 == question_8 or question_18 == question_9 or question_18 == question_10 or question_18 == question_11 or question_18 == question_12 or question_18 == question_13 or question_18 == question_14 or question_18 == question_15 or question_18 == question_16 or question_18 == question_17:
+  if question_18 in question_order:
     exec("q18()")
   else:
     question_order.append(question_18)
 def q19 ():
   question_19=(random.randint(1,n))
-  if question_19 == question_1 or question_19 == question_2 or question_19 == question_3 or question_19 == question_4 or question_19 == question_5 or question_19 == question_6 or question_19 == question_7 or question_19 == question_8 or question_19 == question_9 or question_19 == question_10 or question_19 == question_11 or question_19 == question_12 or question_19 == question_13 or question_19 == question_14 or question_19 == question_15 or question_19 == question_16 or question_19 == question_17 or question_19 == question_18:
+  if question_19 in question_order:
     exec("q19()")
   else:
     question_order.append(question_19)
 def q20 ():
   question_20=(random.randint(1,n))
-  if question_20 == question_1 or question_20 == question_2 or question_20 == question_3 or question_20 == question_4 or question_20 == question_5 or question_20 == question_6 or question_20 == question_7 or question_20 == question_8 or question_20 == question_9 or question_20 == question_10 or question_20 == question_11 or question_20 == question_12 or question_20 == question_13 or question_20 == question_14 or question_20 == question_15 or question_20 == question_16 or question_20 == question_17 or question_20 == question_18 or question_20 == question_19:
+  if question_20 in question_order:
     exec("q20()")
   else:
     question_order.append(question_20)
 def DQ():
   qc.clear()
   qc.append(question_order[qn[0]])
-  print(question_order)
   for question in questions:
     if question['name']==qc[0]:
       display.config(state='normal')
@@ -200,7 +200,6 @@ def DQ():
       pass
 
 def submit():
-  print("submitted")
   for question in questions:
       i = 0
       for answer in question['answers']:
@@ -210,18 +209,9 @@ def submit():
       response = int(response)
       response -= 1
       if response >= 0 and response < i:
-        print("response in bounds")
-        print(qc[0])
         for question in questions:
-          print(qc[0])
-          print(question['name'])
-          print("---")
           if question['name']==qc[0]:
-            print("name check passed")
-            print(qc[0])
-            print(question['name'])
             if question['answers'][response]['correct'] == 10:
-              print("correct")
               display.config(state='normal')
               display.delete("0.0",tk.END)
               display.insert(tk.END,"Correct!")
@@ -231,9 +221,6 @@ def submit():
               count2=Correct_answers[0]+1
               Correct_answers.clear()
               Correct_answers.append(count2)
-              print(qn)
-              print(Correct_answers)
-              print(quiz_questions)
               time.sleep(1)
             if question['answers'][response]['correct'] == 0:
               display.config(state='normal')
@@ -243,9 +230,6 @@ def submit():
               display.config(state='disabled')
               window.update()
               time.sleep(1)
-              print(qn)
-              print(Correct_answers)
-              print(quiz_questions)
         count=qn[0]+1
         qn.clear()
         qn.append(count)
