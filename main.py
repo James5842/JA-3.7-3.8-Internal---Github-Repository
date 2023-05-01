@@ -183,6 +183,7 @@ def q20 ():
 def DQ():
   qc.clear()
   qc.append(question_order[qn[0]])
+  print(question_order)
   for question in questions:
     if question['name']==qc[0]:
       display.config(state='normal')
@@ -199,6 +200,7 @@ def DQ():
       pass
 
 def submit():
+  print("submitted")
   for question in questions:
       i = 0
       for answer in question['answers']:
@@ -208,9 +210,18 @@ def submit():
       response = int(response)
       response -= 1
       if response >= 0 and response < i:
+        print("response in bounds")
+        print(qc[0])
         for question in questions:
+          print(qc[0])
+          print(question['name'])
+          print("---")
           if question['name']==qc[0]:
+            print("name check passed")
+            print(qc[0])
+            print(question['name'])
             if question['answers'][response]['correct'] == 10:
+              print("correct")
               display.config(state='normal')
               display.delete("0.0",tk.END)
               display.insert(tk.END,"Correct!")
@@ -224,21 +235,6 @@ def submit():
               print(Correct_answers)
               print(quiz_questions)
               time.sleep(1)
-              if qn >= quiz_questions:
-                instructions.place (x=18, y=1230)
-                answer_box.place (x=20, y=1255)
-                submit_button.place (x=270, y=1250)
-                display.config(state='normal')
-                display.delete("0.0",tk.END)
-                display.insert(tk.END,"Quiz over, you got ")
-                display.insert(tk.END,Correct_answers)
-                display.insert(tk.END,"/")
-                display.insert(tk.END,quiz_questions)
-                display.insert(tk.END," Correct")
-                answer_box.delete("0",tk.END)
-                display.config(state='disabled')
-              else:
-                exec("DQ()")
             if question['answers'][response]['correct'] == 0:
               display.config(state='normal')
               display.delete("0.0",tk.END)
@@ -250,24 +246,24 @@ def submit():
               print(qn)
               print(Correct_answers)
               print(quiz_questions)
-              if qn >= quiz_questions:
-                instructions.place (x=18, y=1230)
-                answer_box.place (x=20, y=1255)
-                submit_button.place (x=270, y=1250)
-                display.config(state='normal')
-                display.delete("0.0",tk.END)
-                display.insert(tk.END,"Quiz over, you got ")
-                display.insert(tk.END,Correct_answers)
-                display.insert(tk.END,"/")
-                display.insert(tk.END,quiz_questions)
-                display.insert(tk.END," Correct")
-                answer_box.delete("0",tk.END)
-                display.config(state='disabled')
-              else:
-                exec("DQ()")
         count=qn[0]+1
         qn.clear()
         qn.append(count)
+        if qn[0] >= quiz_questions[0]-1:
+          instructions.place (x=18, y=1230)
+          answer_box.place (x=20, y=1255)
+          submit_button.place (x=270, y=1250)
+          display.config(state='normal')
+          display.delete("0.0",tk.END)
+          display.insert(tk.END,"Quiz over, you got ")
+          display.insert(tk.END,Correct_answers)
+          display.insert(tk.END,"/")
+          display.insert(tk.END,quiz_questions)
+          display.insert(tk.END," Correct")
+          answer_box.delete("0",tk.END)
+          display.config(state='disabled')
+        else:
+          exec("DQ()")
       else:
         display.config(state='normal')
         display.delete("0.0",tk.END)
